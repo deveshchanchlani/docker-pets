@@ -168,7 +168,7 @@ This is the first iteration of our compose file for the Docker Pets application:
 version: '3.1'
 services:
     web:
-        image: chrch/docker-pets:latest
+        image: chrch/docker-pets:1.0
         ports:
             - 5000
         healthcheck:
@@ -232,7 +232,7 @@ Now we are going to update the `pets` stack with the following compose file. We 
 version: '3.1'
 services:
     web:
-        image: chrch/docker-pets:latest
+        image: chrch/docker-pets:1.0
         deploy:
             replicas: 3
         ports:
@@ -243,7 +243,7 @@ services:
             retries: 3   
             
     visualizer:
-        image: manomarks/visualizer
+        image: dockersamples/visualizer
         ports:
             - 8080
         deploy:
@@ -323,7 +323,7 @@ In this step we will deploy a new compose file that adds functionality on top of
 version: '3.1'
 services:
     web:
-        image: chrch/docker-pets:latest
+        image: chrch/docker-pets:1.0
         deploy:
             replicas: 3
         ports:
@@ -352,7 +352,7 @@ services:
             - backend
             
     visualizer:
-        image: manomarks/visualizer
+        image: dockersamples/visualizer
         ports:
             - 8080
         deploy:
@@ -408,7 +408,7 @@ This secret will now be stored encrypted in the UCP data store. When application
 version: '3.1'
 services:
     web:
-        image: chrch/docker-pets:latest
+        image: chrch/docker-pets:1.0
         deploy:
             replicas: 3
         ports:
@@ -441,7 +441,7 @@ services:
 
             
     visualizer:
-        image: manomarks/visualizer
+        image: dockersamples/visualizer
         ports:
             - 8080
         deploy:
